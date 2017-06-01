@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red2" >
+
+    <TextView android:id="@+id/SplashTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/splash"
+        android:textColor="@color/red3"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <GridView
+        android:id="@+id/myGrid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp"
+        android:background="@color/red2"
+
+        android:gravity="center"
+        android:horizontalSpacing="50dp"
+        android:numColumns="3"
+
+        android:verticalSpacing="50dp"
+        />
+
+    <!--             android:columnWidth="90dp"
+            android:stretchMode="columnWidth" -->
+
+    <TextView
+        android:id="@+id/timerValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pauseButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:textSize="40sp"
+        android:textColor="@color/red"
+        android:text="@string/timerVal" />
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/startButton"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_alignBaseline="@+id/pauseButton"
+        android:layout_alignBottom="@+id/pauseButton"
+        android:layout_alignLeft="@+id/myGrid"
+        android:layout_marginLeft="26dp"
+        android:text="@string/startButtonLabel" />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/myGrid"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="26dp"
+        android:text="@string/pauseButtonLabel" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_alignBaseline="@+id/startButton"
+        android:layout_alignBottom="@+id/startButton"
+        android:layout_centerHorizontal="true"
+        android:text="@string/nextGameLabel" />
+
+</RelativeLayout>
